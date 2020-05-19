@@ -1,25 +1,18 @@
 package JavaSqlServer.DTO;
 
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
-
 public class Funcionario {
     private Integer ID;
     private String nome;
     private String funcao;
     private Integer idade;
 
-    public Funcionario(ResultSet rs) throws SQLException {
-        ID = rs.getInt("ID");
-        nome = rs.getString("Nome");
-        funcao = rs.getString("Funcao");
-        idade = rs.getInt("Idade");
-    }
 
-    public Funcionario() {
-
+    public Funcionario(Integer ID, String nome, String funcao, Integer idade) {
+        this.ID = ID;
+        this.nome = nome;
+        this.funcao = funcao;
+        this.idade = idade;
     }
 
     public Integer getID() {
@@ -57,10 +50,10 @@ public class Funcionario {
     @Override
     public String toString() {
         return "Funcionario{" +
-                "ID=" + ID +
-                ", nome='" + nome + '\'' +
-                ", funcao='" + funcao + '\'' +
-                ", idade=" + idade +
-                '}';
+                "ID = " + ID +
+                ", Nome = ' " + nome + '\'' +
+                ", Funcao = '" + funcao + '\'' +
+                ", Idade = " + idade +
+                '}' + "\n";
     }
 }
