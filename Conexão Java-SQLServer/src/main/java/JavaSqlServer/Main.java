@@ -9,8 +9,10 @@ public class Main {
     public static void main(String[] args) {
         int ID, idade;
         String nome, funcao, opcao;
-        Dao dao = new Dao();
         Scanner input = new Scanner(System.in);
+        Dao dao = new Dao();
+
+
         while (true) {
 
             System.out.println("Escolha uma das opções: \n" +
@@ -24,7 +26,7 @@ public class Main {
             opcao = input.next();
             switch (opcao) {
                 case "1":
-                    System.out.println("Resultado: " + dao.getAllFuncionarios() + "\n");
+                    System.out.println("Resultado:\n " + dao.getAllFuncionarios() + "\n");
                     break;
                 case "2":
                     System.out.println("Digite o ID do Funcionário: ");

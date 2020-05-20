@@ -15,10 +15,12 @@ public class Funcionario {
         this.idade = idade;
     }
 
+    @SuppressWarnings("unused")
     public Integer getID() {
         return ID;
     }
 
+    @SuppressWarnings("unused")
     public void setID(Integer ID) {
         this.ID = ID;
     }
@@ -27,33 +29,37 @@ public class Funcionario {
         return nome;
     }
 
+    @SuppressWarnings("unused")
     public void setNome(String nome) {
         this.nome = nome;
     }
+
 
     public String getFuncao() {
         return funcao;
     }
 
+    @SuppressWarnings("unused")
     public void setFuncao(String funcao) {
         this.funcao = funcao;
     }
+
 
     public Integer getIdade() {
         return idade;
     }
 
+    @SuppressWarnings("unused")
     public void setIdade(Integer idade) {
         this.idade = idade;
     }
 
-    @Override
+
     public String toString() {
-        return "Funcionario{" +
+        return "Funcionario: " +
                 "ID = " + ID +
-                ", Nome = ' " + nome + '\'' +
-                ", Funcao = '" + funcao + '\'' +
-                ", Idade = " + idade +
-                '}' + "\n";
+                "|| Nome = " + nome +
+                "|| Funcao = " + funcao +
+                "|| Idade = " + idade + "\n";
     }
 }

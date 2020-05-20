@@ -48,6 +48,60 @@ public class Dao {
         }
     }
 
+    @SuppressWarnings("unused")
+    public String getFuncionarioFuncao(int ID) {
+        try {
+            Funcionario funcionario = null;
+            Connection conn = conexao.abrir();
+            PreparedStatement pst = conn.prepareStatement("SELECT * FROM Funcionario WHERE ID = ?");
+            pst.setInt(1, ID);
+            ResultSet rs = pst.executeQuery();
+            if (rs.next()) {
+                funcionario = new Funcionario(rs.getInt("ID"),
+                        rs.getString("Nome"),
+                        rs.getString("Funcao"),
+                        rs.getInt("Idade"));
+            }
+
+
+            rs.close();
+            pst.close();
+
+
+            assert funcionario != null;
+            return funcionario.getFuncao();
+
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage(), e);
+        }
+    }
+    @SuppressWarnings("unused")
+    public int getFuncionarioIdade(int ID) {
+        try {
+            Funcionario funcionario = null;
+            Connection conn = conexao.abrir();
+            PreparedStatement pst = conn.prepareStatement("SELECT * FROM Funcionario WHERE ID = ?");
+            pst.setInt(1, ID);
+            ResultSet rs = pst.executeQuery();
+            if (rs.next()) {
+                funcionario = new Funcionario(rs.getInt("ID"),
+                        rs.getString("Nome"),
+                        rs.getString("Funcao"),
+                        rs.getInt("Idade"));
+            }
+
+
+            rs.close();
+            pst.close();
+
+
+            assert funcionario != null;
+            return funcionario.getIdade();
+
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage(), e);
+        }
+    }
 
     public String getFuncionarioName(int ID) {
         try {
@@ -78,7 +132,7 @@ public class Dao {
 
     public List<Funcionario> getAllFuncionarios() {
         try {
-            List<Funcionario> listaDeDados = new ArrayList<Funcionario>();
+            List<Funcionario> listaDeDados = new ArrayList<>();
             Connection conn = conexao.abrir();
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery("SELECT * FROM Funcionario");
