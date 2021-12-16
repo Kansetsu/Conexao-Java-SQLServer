@@ -420,4 +420,4 @@ public class Main {
 
 ### Conclusão 
 
-Todo o código completo e mais informações sobre o projeto estão presentes lá no GitHub e no meu [Site pessoal](https://kansetsu.netlify.app/portfolio-dicas-0/). Se cuida!! 😁
+Todo o código completo e mais informações sobre o projeto estão presentes aqui no GitHub e no meu [Site pessoal](https://kansetsu.netlify.app/portfolio-dicas-0/). Se cuida!! 😁
